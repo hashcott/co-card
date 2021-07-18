@@ -1,47 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Card</title>
-  <link rel="stylesheet" href="static/style/card.css">
-</head>
-<body>
-  <main class="main-container">
-    <div class="scene">
-      <!-- Card --> 
-      <div class="card">
-        <div class="card__front">
-          <img class="card__logo" src="./static/image/visa-logo.svg" alt="" srcset="">
-          <div class="card__number number">
-            <div class="number-group number-group--0">
-              4000
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card</title>
+    <link rel="stylesheet" href="static/style/card.css" />
+  </head>
+  <body>
+    <main class="main-container">
+      <div class="scene">
+        <!-- Card -->
+        <div class="card">
+          <!-- Card front -->
+          <div class="card__front">
+            <img src="static/image/visa-logo.svg" class="card__logo" />
+            <div class="card__number number">
+              <div class="number-group number-group--0">4011</div>
+              <div class="number-group number-group--1">2016</div>
+              <div class="number-group number-group--2">7239</div>
+              <div class="number-group number-group--3">1586</div>
             </div>
-            <div class="number-group number-group--1">
-              6335
-            </div>
-            <div class="number-group number-group--2">
-              3847
-            </div>
-            <div class="number-group number-group--3">
-              3656
+            <div class="card__details">
+              <div class="card__holder">
+                <span class="card__holder__title">Card Holder</span>
+                <span class="card__holder__name">Zara Lynch</span>
+              </div>
+              <div class="card__expiration">
+                <span class="card__expiration__title">Expires</span>
+                <span class="card__expiration__date">11/28</span>
+              </div>
             </div>
           </div>
-          <div class="card__details">
-            <div class="card__holder">
-              <span class="card__holder__title">Card Holder</span>
-              <span class="card__holder__name">Nguyen Duc Hanh</span>
+          <!-- Card back -->
+          <div class="card__back">
+            <div class="card__stripe"></div>
+            <div class="card__signature">
+              <span class="card__cvv">CVV</span>
+              <span class="card__cvv-number">239</span>
             </div>
-
-            <div class="card__expiration">
-              <span class="card__expiration__title">Expires</span>
-              <span class="card__expiration__date">11/28</span>
-            </div>
+            <p class="card__info">
+              Using this card to purchase goods and services whenever you see
+              the VISA symbol. Your use of this card is acceptance to your
+              issuer's arragements including amendments.
+            </p>
           </div>
         </div>
       </div>
-    </div>
-  </main>
-</body>
+    </main>
+
+    <script src="app/card.js"></script>
+  </body>
 </html>
