@@ -1,8 +1,6 @@
-/* 
-  *******************
-  Basic Style
-  ********************
-*/
+/***************
+ * BASE STYLES *
+ ***************/
 
 * {
   margin: 0;
@@ -11,7 +9,6 @@
 }
 
 /* Variables */
-
 :root {
   --white: #fafafa;
   --violet: #e2d8fd;
@@ -31,8 +28,8 @@ html {
 }
 
 body {
-  font-size: 1.6rem; /* 1.6 * 16px =  */
-  background-color: var(--violet);
+  font-size: 1.6rem;
+  background: var(--violet);
 }
 
 a {
@@ -43,17 +40,19 @@ ul {
   list-style: none;
 }
 
-/* 
-  *******************
-  Main container style
-  ********************
-*/
+/******************
+ * MAIN CONTAINER *
+ ******************/
 
 .main-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
+
+/********
+ * CARD *
+ ********/
 
 .scene {
   width: 90%;
@@ -68,10 +67,11 @@ ul {
   height: 100%;
   position: relative;
   transition: transform 1s;
+  transform-style: preserve-3d;
   margin: 0 auto;
-  border-radius: 10%;
+  border-radius: 20px;
   box-shadow: -15px 20px 20px rgba(22, 4, 74, 0.15);
-  background-color: var(--dark-blue);
+  background: var(--dark-blue);
 }
 
 .card:hover {
@@ -84,11 +84,13 @@ ul {
   height: 100%;
   position: absolute;
   backface-visibility: hidden;
+  transform-style: preserve-3d;
 }
 
 .card__front {
   padding: 0 2rem;
 }
+
 .card__logo {
   width: 7rem;
   height: 7rem;
@@ -124,13 +126,62 @@ ul {
 
 .card__holder__title,
 .card__expiration__title {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: var(--white);
   opacity: 0.7;
   font-size: 1.3rem;
+  margin-bottom: 0.1rem;
 }
 
 .card__holder__name,
 .card__expiration__date {
   text-transform: uppercase;
+  font-size: 1.8rem;
+}
+
+/* Card back */
+.card__back {
+  padding-top: 4rem;
+  transform: rotateY(180deg);
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card__stripe {
+  height: 4rem;
+  background-color: var(--gray1);
+}
+
+.card__signature {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 4.5rem;
+  background-color: var(--white);
+  margin: 2rem 6rem 0 2rem;
+  padding-right: 1rem;
+}
+
+.card__cvv,
+.card__cvv-number,
+.card__info {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600
+}
+
+.card__cvv,
+.card__cvv-number {
+  color: var(--dark-blue);
+}
+
+.card__cvv {
+  margin-right: 0.5rem;
+}
+
+.card__info {
+  font-size: 0.7rem;
+  padding: 1.5rem 2rem;
+  color: var(--white);
 }
